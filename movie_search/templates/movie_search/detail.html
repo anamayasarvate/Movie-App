@@ -1,0 +1,29 @@
+{% extends 'movie_search/base.html' %}
+
+{% block content %}
+
+<!-- Used a card to display the movie details -->
+
+<div class="card container" style="width: 18rem;">
+  <img src="{{ poster }}" class="card-img-top" alt="{{ title }} image">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{ title }}</h5>
+    <ul>
+    	<li>Year: {{ year }}</li>
+    	<li>Type: {{ type }}</li>
+    </ul>
+
+    <!-- Here a flag is used to check if the movie is already in favourites -->
+
+    {% if flag %}
+    <form action="{% url 'add-to-favourite' %}" method="POST">
+    	{% csrf_token %}
+    	<button type="submit" class="btn btn-primary ml-4">Add to Favorite <input type="hidden" name="title" value="{{ title }}"></button>
+    	}
+    </form>
+    {% endif %}
+
+    
+  </div>
+</div>
+{% endblock content %}

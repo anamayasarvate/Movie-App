@@ -1,0 +1,17 @@
+{% extends 'movie_search/base.html' %}
+{% block content %}
+{% include 'partials/_form.html' %}
+
+<!-- Search results are displayed and are made clickable with the help of input tag -->
+
+{% if title %}
+<form id="myForm" target="_blank" action="{% url 'detail' %}" method="GET">
+	{% csrf_token %}
+	<ul class="list-group">
+		{% for search_list_element in search_list %}
+			<input id="inputSubmit" class="list-group-item" type="submit" name="search_list_element" value="{{ search_list_element }}">
+	  	{% endfor %}
+	</ul>
+</form>
+{% endif %}
+{% endblock content %}

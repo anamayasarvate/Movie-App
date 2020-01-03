@@ -1,0 +1,14 @@
+{% extends 'movie_search/base.html' %}
+{% block content %}
+
+<!-- List of favourite objects is displayed with a for loop -->
+
+<div class="container">
+	<h1 class="text-center">Here are the movies you saved as favourites</h1>
+	<ul class="list-group">
+	{% for object in object_list %}
+		<li class="list-group-item text-center font-weight-bold">{{ object.title }}</li>
+	{% endfor %}
+	</ul>
+</div>
+{% endblock content %}

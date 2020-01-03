@@ -1,0 +1,9 @@
+<!-- A partial for message display is used so that the code does not get repeated -->
+
+{% if messages %}
+{% for message in messages %}
+	<div class=" text-center font-weight-bold alert alert-{{message.tags}}">
+		{{ message }}
+	</div>
+{% endfor %}
+{% endif %}

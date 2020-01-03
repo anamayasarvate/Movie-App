@@ -1,0 +1,30 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+.navbar {
+  border-bottom: #008ed6 3px solid;
+  opacity: 0.8;
+}
+
+#content{
+  padding-top:80px;
+}
+
+li{
+	color: #333;
+}
+
+.list-group{
+	color: #333;
+}
+
+#inputSubmit:hover
+{
+	background-color: #007bff;
+}
+
+.card-title{
+	color: #333;
+}

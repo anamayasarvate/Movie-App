@@ -1,0 +1,10 @@
+<!-- A partial for the form is created so that the code does not get repeated -->
+
+<form action="{% url 'home' %}" method="GET">
+ {% csrf_token %}
+ <div class="container">
+  <div class="form-group">
+    <input type="text" name="title" placeholder="Enter a Movie Name" class="form-control">
+  <button type="submit" class="mt-2 btn btn-primary">Search</button>
+ </div>
+</form>
